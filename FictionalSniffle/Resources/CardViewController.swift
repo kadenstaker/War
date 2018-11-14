@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CardViewController: UIViewController {
     
@@ -19,6 +20,9 @@ class CardViewController: UIViewController {
     
     // MARK: - Instantces
     let backOfCardImage = UIImage(named: "backOfCard")
+    
+    // Not sure if this is needed
+    var cards: [Card] = []
     
     // MARK: - Life Cyle
     override func viewDidLoad() {
@@ -38,34 +42,49 @@ extension CardViewController {
         return true
     }
     
+    
+    // MARK: - Shake to make the fetch calls
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             startAnimatingCard()
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             
+            // Fetch the cards
             CardController.shared.getCards(amount: 2) { (cards) in
-              
-                    CardController.shared.getImagesFor(card: cards[0], completion: { (playerOneCardImage) in
-                        CardController.shared.getImagesFor(card: cards[1], completion: { (playerTwoCardImage) in
-                            DispatchQueue.main.async {
-                                self.playerOneCardImage.image = playerOneCardImage
-                                self.playerTwoCardImage.image = playerTwoCardImage
-                            }
-                        })
-                        if cards[0].value > cards[1].value {
-                            
-                            DispatchQueue.main.async {
-                                self.presentAlertControllerWith(title: "Player One Wins", message: "Smokers are Jokers")
-                                self.stopAnimatingCard()
-                            }
-                        } else {
-                            DispatchQueue.main.async {
-                                self.presentAlertControllerWith(title: "Player Two Wins", message: "Stay in School")
-                                self.stopAnimatingCard()
-                            }
+                //           self.cards = cards
+                //                if cards.count > 0 {
+                // Fetch the cards images
+                CardController.shared.getImagesFor(card: cards[0], completion: { (playerOneCardImage) in
+                    CardController.shared.getImagesFor(card: cards[1], completion: { (playerTwoCardImage) in
+                        DispatchQueue.main.async {
+                            self.playerOneCardImage.image = playerOneCardImage
+                            self.playerTwoCardImage.image = playerTwoCardImage
                         }
                     })
+                    // Player TWO Won
+                    if cards[0].value > cards[1].value {
+                        
+                        DispatchQueue.main.async {
+                            self.userTwoWon()
+                            self.stopAnimatingCard()
+                            
+                        }
+                    } else {
+                        // Player ONE Won
+                        DispatchQueue.main.async {
+                            self.userOneWon()
+                            self.stopAnimatingCard()
+                            
+                        }
+                    }
+                })
             }
-        }
+//        } else  {
+//            DispatchQueue.main.async {
+//                self.stopAnimatingCard()
+//                self.presentAlertControllerWith(title: "error", message: "error")
+//            }
+      }
     }
 }
 
@@ -79,4 +98,5 @@ extension CardViewController {
         playerOneCardImage.stopRotating()
     }
 }
+
 
