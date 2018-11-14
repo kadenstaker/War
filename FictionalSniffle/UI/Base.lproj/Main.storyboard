@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1X-rf-gza">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="igg-Eu-lrT">
+            <objects>
+                <viewController id="u1X-rf-gza" customClass="CardViewController" customModule="FictionalSniffle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="06W-ee-iwd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-Fu-AVP">
+                                <rect key="frame" x="123" y="329" width="131" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="MeU-wK-L70"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rotation">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backOfCard" translatesAutoresizingMaskIntoConstraints="NO" id="iEs-Bq-Yh6">
+                                <rect key="frame" x="123" y="361" width="131" height="224"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htd-fX-FuG">
+                                <rect key="frame" x="123" y="290" width="131" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="N7i-Nu-qIQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rotation">
+                                        <integer key="value" value="-180"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backOfCard" translatesAutoresizingMaskIntoConstraints="NO" id="cnQ-YK-l2Z">
+                                <rect key="frame" x="123" y="58" width="131" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="s0k-h1-5XL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cnQ-YK-l2Z" firstAttribute="leading" secondItem="aYf-rX-y9j" secondAttribute="leading" constant="123" id="2EW-tw-hNn"/>
+                            <constraint firstItem="VJL-Fu-AVP" firstAttribute="leading" secondItem="aYf-rX-y9j" secondAttribute="leading" constant="123" id="2MB-Pk-azY"/>
+                            <constraint firstItem="cnQ-YK-l2Z" firstAttribute="top" secondItem="aYf-rX-y9j" secondAttribute="top" constant="38" id="CUa-dz-Vma"/>
+                            <constraint firstItem="iEs-Bq-Yh6" firstAttribute="leading" secondItem="aYf-rX-y9j" secondAttribute="leading" constant="123" id="E3o-u3-88V"/>
+                            <constraint firstItem="aYf-rX-y9j" firstAttribute="trailing" secondItem="Htd-fX-FuG" secondAttribute="trailing" constant="121" id="Ejs-hI-SRt"/>
+                            <constraint firstItem="aYf-rX-y9j" firstAttribute="trailing" secondItem="iEs-Bq-Yh6" secondAttribute="trailing" constant="121" id="HYO-ZS-wNd"/>
+                            <constraint firstItem="aYf-rX-y9j" firstAttribute="bottom" secondItem="iEs-Bq-Yh6" secondAttribute="bottom" constant="82" id="Vb7-9x-nAz"/>
+                            <constraint firstItem="Htd-fX-FuG" firstAttribute="top" secondItem="cnQ-YK-l2Z" secondAttribute="bottom" constant="8" id="dV1-l5-QeD"/>
+                            <constraint firstItem="iEs-Bq-Yh6" firstAttribute="top" secondItem="VJL-Fu-AVP" secondAttribute="bottom" constant="8" id="f1p-af-0zf"/>
+                            <constraint firstItem="VJL-Fu-AVP" firstAttribute="top" secondItem="Htd-fX-FuG" secondAttribute="bottom" constant="15" id="gc5-es-1On"/>
+                            <constraint firstItem="aYf-rX-y9j" firstAttribute="trailing" secondItem="VJL-Fu-AVP" secondAttribute="trailing" constant="121" id="iz3-8w-9T6"/>
+                            <constraint firstItem="Htd-fX-FuG" firstAttribute="leading" secondItem="aYf-rX-y9j" secondAttribute="leading" constant="123" id="lGB-ui-w9w"/>
+                            <constraint firstItem="aYf-rX-y9j" firstAttribute="trailing" secondItem="cnQ-YK-l2Z" secondAttribute="trailing" constant="121" id="ohJ-l9-uLU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aYf-rX-y9j"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerOneCardImage" destination="cnQ-YK-l2Z" id="2qE-P6-igm"/>
+                        <outlet property="playerTwoCardImage" destination="iEs-Bq-Yh6" id="stI-cq-cxE"/>
+                        <outlet property="userNameOne" destination="VJL-Fu-AVP" id="ycB-1k-1mV"/>
+                        <outlet property="userNameTwo" destination="Htd-fX-FuG" id="oW9-IK-8dT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybw-kz-r0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218.40000000000001" y="-199.25037481259372"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backOfCard" width="2000" height="2913"/>
+    </resources>
+</document>
