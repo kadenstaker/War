@@ -75,9 +75,10 @@
 		FA77BAD1219B3E4C00C30E27 /* FictionalSniffle */ = {
 			isa = PBXGroup;
 			children = (
+				FAEB44B6219CA71600997474 /* Extensions */,
 				FA77BAE5219B5AAF00C30E27 /* Model */,
-				FA77BAEA219B5BA200C30E27 /* Controllers */,
 				47AC4333219B7386009DC4A5 /* UI */,
+				FA77BAEA219B5BA200C30E27 /* Controllers */,
 				FA77BAE4219B3E6600C30E27 /* Resources */,
 			);
 			path = FictionalSniffle;
@@ -89,10 +90,6 @@
 				FA77BAD2219B3E4C00C30E27 /* AppDelegate.swift */,
 				FA77BAD9219B3E4D00C30E27 /* Assets.xcassets */,
 				FA77BADE219B3E4D00C30E27 /* Info.plist */,
-				47AC432F219B6F71009DC4A5 /* ExtensionUIButton.swift */,
-				47E32E19219B63AC00B14448 /* ExtensionUILabel.swift */,
-				47AC4334219B73A1009DC4A5 /* UI+Alert.swift */,
-				4702E425219B87D600FBAF69 /* ExtensionUIImage.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -128,6 +125,17 @@
 				FA77BAE8219B5B9700C30E27 /* ModelController */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAEB44B6219CA71600997474 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				47AC432F219B6F71009DC4A5 /* ExtensionUIButton.swift */,
+				47E32E19219B63AC00B14448 /* ExtensionUILabel.swift */,
+				47AC4334219B73A1009DC4A5 /* UI+Alert.swift */,
+				4702E425219B87D600FBAF69 /* ExtensionUIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

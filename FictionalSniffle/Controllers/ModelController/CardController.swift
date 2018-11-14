@@ -33,7 +33,6 @@ class CardController {
             do {
                 let cards = try JSONDecoder().decode(CardsDictionary.self, from: data).cards
                 completion(cards)
-//                let player1Wins = cards[0] > cards[1]
             } catch let error {
                 print("Error decoding object: \(error) \(error.localizedDescription)")
                 completion([]); return

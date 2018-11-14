@@ -14,13 +14,13 @@ extension UIViewController {
     
     func presentAlertControllerWith(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okOptionAction = UIAlertAction(title: "It's Cool Bro", style: .cancel, handler: nil)
+        let okOptionAction = UIAlertAction(title: "It's Cool Bro'", style: .cancel, handler: nil)
         alertController.addAction(okOptionAction)
         self.present(alertController, animated:  true)
     }
 }
 
-// MARK: -  Don't Delete this commented out code.
+// MARK: -  Dont Delet this commented out Code.
 
 //    func presentRotatedUIAlertWith() {
 //        let alert = UIAlertController(title: "Erro Fetching Card Image", message: "🙏🏽Please dont give us a bad review on the App Store🙏🏽", preferredStyle: .alert)
