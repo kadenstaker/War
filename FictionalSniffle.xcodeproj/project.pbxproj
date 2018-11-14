@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4702E426219B87D600FBAF69 /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4702E425219B87D600FBAF69 /* ExtensionUIImage.swift */; };
+		471A4162219CDB3A00C94B80 /* UserFont+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471A4161219CDB3A00C94B80 /* UserFont+UI.swift */; };
 		47AC4330219B6F71009DC4A5 /* ExtensionUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC432F219B6F71009DC4A5 /* ExtensionUIButton.swift */; };
 		47AC4332219B71E0009DC4A5 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC4331219B71E0009DC4A5 /* CardViewController.swift */; };
 		47AC4335219B73A1009DC4A5 /* UI+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC4334219B73A1009DC4A5 /* UI+Alert.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4702E425219B87D600FBAF69 /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
+		471A4161219CDB3A00C94B80 /* UserFont+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserFont+UI.swift"; sourceTree = "<group>"; };
 		47AC432F219B6F71009DC4A5 /* ExtensionUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIButton.swift; sourceTree = "<group>"; };
 		47AC4331219B71E0009DC4A5 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardViewController.swift; path = FictionalSniffle/Resources/CardViewController.swift; sourceTree = SOURCE_ROOT; };
 		47AC4334219B73A1009DC4A5 /* UI+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Alert.swift"; sourceTree = "<group>"; };
@@ -47,11 +49,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		47AC4333219B7386009DC4A5 /* UI */ = {
+		471A415E219CDB0300C94B80 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				FA77BAD6219B3E4C00C30E27 /* Main.storyboard */,
 				FA77BADB219B3E4D00C30E27 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		471A415F219CDB1200C94B80 /* ViewControllerUI */ = {
+			isa = PBXGroup;
+			children = (
+				471A4161219CDB3A00C94B80 /* UserFont+UI.swift */,
+			);
+			path = ViewControllerUI;
+			sourceTree = "<group>";
+		};
+		471A4163219CDE5E00C94B80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				47AC432F219B6F71009DC4A5 /* ExtensionUIButton.swift */,
+				47E32E19219B63AC00B14448 /* ExtensionUILabel.swift */,
+				47AC4334219B73A1009DC4A5 /* UI+Alert.swift */,
+				4702E425219B87D600FBAF69 /* ExtensionUIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		47AC4333219B7386009DC4A5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				471A415E219CDB0300C94B80 /* Storyboards */,
+				471A415F219CDB1200C94B80 /* ViewControllerUI */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -86,13 +116,10 @@
 		FA77BAE4219B3E6600C30E27 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				471A4163219CDE5E00C94B80 /* Extensions */,
 				FA77BAD2219B3E4C00C30E27 /* AppDelegate.swift */,
 				FA77BAD9219B3E4D00C30E27 /* Assets.xcassets */,
 				FA77BADE219B3E4D00C30E27 /* Info.plist */,
-				47AC432F219B6F71009DC4A5 /* ExtensionUIButton.swift */,
-				47E32E19219B63AC00B14448 /* ExtensionUILabel.swift */,
-				47AC4334219B73A1009DC4A5 /* UI+Alert.swift */,
-				4702E425219B87D600FBAF69 /* ExtensionUIImage.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -205,6 +232,7 @@
 				47E32E1A219B63AC00B14448 /* ExtensionUILabel.swift in Sources */,
 				FA77BAD3219B3E4C00C30E27 /* AppDelegate.swift in Sources */,
 				47AC4332219B71E0009DC4A5 /* CardViewController.swift in Sources */,
+				471A4162219CDB3A00C94B80 /* UserFont+UI.swift in Sources */,
 				47AC4330219B6F71009DC4A5 /* ExtensionUIButton.swift in Sources */,
 				47AC4335219B73A1009DC4A5 /* UI+Alert.swift in Sources */,
 				FA77BAED219B5C3500C30E27 /* CardController.swift in Sources */,
@@ -355,7 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L7AYJDAX2C;
 				INFOPLIST_FILE = "$(SRCROOT)/FictionalSniffle/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,7 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L7AYJDAX2C;
 				INFOPLIST_FILE = "$(SRCROOT)/FictionalSniffle/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
