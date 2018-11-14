@@ -6,7 +6,7 @@
 //  Copyright © 2018 Kaden Staker. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct CardsDictionary: Decodable {
     let cards: [Card]
@@ -14,7 +14,7 @@ struct CardsDictionary: Decodable {
 
 struct Card: Decodable {
     let suit: String
-    let image: String
+    let image: String // Note * taking in a string, not an image
     let value: String
     
     var rank: Int {
