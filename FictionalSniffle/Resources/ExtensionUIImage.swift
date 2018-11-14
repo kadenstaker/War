@@ -20,4 +20,12 @@ extension UIImageView {
             self.layer.add(rotation, forKey: "rotationAnimation")
         }
     }
+    func stopRotating() {
+        let kAnimationKey = "rotationAnimation"
+        
+        if self.layer.animation(forKey: kAnimationKey) != nil {
+            self.layer.removeAnimation(forKey: kAnimationKey)
+        }
+    }
+
 }
